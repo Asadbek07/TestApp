@@ -1,0 +1,47 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="TestApp.Views.TestUserControl">
+    
+	<Border BorderBrush="Black" CornerRadius="3" BorderThickness="2" Padding="4" Margin="3,3,3,3">
+			<StackPanel Spacing="20" Margin="4, 0, 0, 20">
+				
+				<StackPanel>
+					<Grid>
+						<Label Grid.Column="0" HorizontalAlignment="Center" FontWeight="Bold">Add File for update</Label>
+							<ToolTip.Tip>
+								<StackPanel>
+									<TextBlock Classes="h1">Hint</TextBlock>
+									<TextBlock Classes="h2">Add file you want to update</TextBlock>
+								</StackPanel>
+							</ToolTip.Tip>
+								<Button Grid.Column="1" Width="20" Height="20" HorizontalAlignment="Right" Content="Some button" />
+					</Grid>
+					<Grid ShowGridLines="False">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"></ColumnDefinition>
+							<ColumnDefinition  Width="Auto"></ColumnDefinition>
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*"></RowDefinition>
+						</Grid.RowDefinitions>
+						<TextBox Text="FilePathFirst" VerticalAlignment="Center" Margin="10, 0, 0, 0" TextWrapping="WrapWithOverflow" Grid.Column="0" Grid.Row="0" Name="overviewFilePath"/>
+						<Button VerticalAlignment="Center" Margin="10, 0, 10, 0" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Right">Browse</Button>
+					</Grid>
+				</StackPanel>
+				<StackPanel>
+					<Label HorizontalAlignment="Center" FontWeight="Bold">Choose Sheet</Label>
+					<ComboBox SelectedItem="" HorizontalAlignment="Stretch" Name ="overviewFileSheetList" Margin="10, 0, 10, 0">
+					</ComboBox>
+				</StackPanel>
+				<StackPanel>
+					<Label HorizontalAlignment="Center" FontWeight="Bold">Header Row Index</Label>
+					<TextBox Text="HeadersRowIndexFirst" Margin="10, 0, 10, 0"></TextBox>
+				</StackPanel>
+			</StackPanel>
+
+		</Border>
+
+</UserControl>

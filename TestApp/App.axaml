@@ -1,0 +1,22 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:TestApp"
+             x:Class="TestApp.App">
+	<Application.Resources>
+		<SolidColorBrush x:Key="MidBlueBrush">#373c44</SolidColorBrush>
+		<SolidColorBrush x:Key="LightBlueBrush">#606875</SolidColorBrush>
+		<SolidColorBrush x:Key="DarkBlueBrush">#1a1c20</SolidColorBrush>
+		<SolidColorBrush x:Key="FadedRedBrush">#bc7c7a</SolidColorBrush>
+
+	</Application.Resources>
+	
+	<Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Styles>
+	    <StyleInclude Source="/Views/LargeLabelControl.axaml"></StyleInclude>
+	    <FluentTheme Mode="Light"/>
+    </Application.Styles>
+	
+</Application>

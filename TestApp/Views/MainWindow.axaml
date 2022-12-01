@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:TestApp.ViewModels"
+        xmlns:uc="clr-namespace:TestApp.Views"
+        xmlns:controls="clr-namespace:TestApp.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="450"
+        x:Class="TestApp.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="TestApp">
+
+	<Design.DataContext>
+		<vm:MainViewModel/>
+	</Design.DataContext>
+	
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+			<ColumnDefinition></ColumnDefinition>
+		</Grid.ColumnDefinitions>
+		
+		<Grid.RowDefinitions>
+			<RowDefinition Height="2*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+			<RowDefinition Height="*"></RowDefinition>
+		</Grid.RowDefinitions>
+		
+		<controls:LargeLabelControl Grid.Column="0" Grid.Row="0" Click="OnBrowseOverviewFileSheetListClick" SheetListName="{Binding OverviewFileSheetList}"></controls:LargeLabelControl>
+		<controls:LargeLabelControl Grid.Column="1" Grid.Row="0" Click="OnBrowseReportsFileSheetListClick" SheetListName="{Binding ReportsFileSheetList}"></controls:LargeLabelControl>
+		<controls:LargeLabelControl Grid.Column="2" Grid.Row="0" Click="OnBrowseAssignmentsFileSheetListClick" SheetListName="{Binding AssignmentsFileSheetList}"></controls:LargeLabelControl>
+		
+		
+	</Grid>
+</Window>
